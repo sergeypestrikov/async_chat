@@ -1,0 +1,11 @@
+auto:
+- Audi
+- BMW
+- Mercedes
+- Лада
+auto_quantity: 4
+auto_price:
+  Audi: 40000€
+  BMW: 50000€
+  Mercedes: 60000€
+  Лада: 800000₽
