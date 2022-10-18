@@ -35,8 +35,8 @@ def get_data():
         os_prod_reg = re.compile(r'Изготовитель системы: \s*\S*')
         os_prod_list.append(os_prod_reg.findall(data)[0].split()[2])
 
-        os_name_reg = re.compile(r'Windows: \s*\S*')
-        os_name_list.append(os_name_reg.findall(data)[0].split()[2])
+        os_name_reg = re.compile(r'Windows \s*\S*')
+        os_name_list.append(os_name_reg.findall(data)[0])
 
         os_code_reg = re.compile(r'Код продукта: \s*\S*')
         os_code_list.append(os_code_reg.findall(data)[0].split()[2])
