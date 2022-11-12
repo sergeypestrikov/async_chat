@@ -1,11 +1,16 @@
 import socket
 import sys
 import json
+import logging
+import log.server_log_config
 from variables import DEFAULT_PORT, ACTION, ACCOUNT_NAME, RESPONSE, MSG_LENGTH, MAX_CONNECTION, PRESENCE, TIME, USER, ERROR
 from utils import get_msg, send_msg
 
+SERVER_LOG = logging.getLogger('server_log')
 
 def get_client_msg(message):
+
+    SERVER_LOG.debug(f'Проверка сообщения от клиента: {message}')
     if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
             and USER in message and message[USER][ACCOUNT_NAME] == 'Guest':
         return {RESPONSE: 200}
@@ -27,7 +32,7 @@ def main():
         print('Укажите номер порта после параметра -p')
         sys.exit(1)
     except ValueError:
-        print('Укажите номер порта в диапазоне 1024 - 65535')
+        SERVER_LOG.critical(f'Номер порта {listen_port} указан некорректно. Нужно указать в диапазоне 1024 - 65535')
         sys.exit(1)
 
     try:
@@ -38,7 +43,7 @@ def main():
     except IndexError:
         print('Укажите адрес после параметра -a')
         sys.exit(1)
-
+    SERVER_LOG.info(f'Сервер запущен. порт: {listen_port}')
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((listen_address, listen_port))
 
@@ -46,13 +51,18 @@ def main():
 
     while True:
         client, client_address = s.accept()
+        SERVER_LOG.info(f'соединение установлено c {client_address}')
         try:
             message_from_client = get_msg(client)
+            SERVER_LOG.debug(f'Получено сообщение {message_from_client}')
             print(message_from_client)
             response = get_client_msg(message_from_client)
+            SERVER_LOG.info(f'Сформирован ответ {response}')
             send_msg(client, response)
+            SERVER_LOG.debug(f'Соединение с клиентом {client_address} закрывается')
             client.close()
         except (ValueError, json.JSONDecodeError):
+            SERVER_LOG.error(f'От клиента {client_address} принято некорректное сообщение')
             print('Принято некорректное сообщение от клиента')
             client.close()
 
