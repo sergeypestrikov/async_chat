@@ -5,9 +5,13 @@ import logging
 import log.server_log_config
 from variables import DEFAULT_PORT, ACTION, ACCOUNT_NAME, RESPONSE, MSG_LENGTH, MAX_CONNECTION, PRESENCE, TIME, USER, ERROR
 from utils import get_msg, send_msg
+from wrapper import log
+
 
 SERVER_LOG = logging.getLogger('server_log')
 
+
+@log
 def get_client_msg(message):
 
     SERVER_LOG.debug(f'Проверка сообщения от клиента: {message}')
@@ -20,6 +24,7 @@ def get_client_msg(message):
     }
 
 
+@log
 def main():
     try:
         if '-p' in sys.argv:
