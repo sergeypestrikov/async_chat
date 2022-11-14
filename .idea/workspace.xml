@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="985e3d7c-8ece-4833-89b0-0f9a6376bb1b" name="Changes" comment="Add Loggers for Server and Client">
-      <change afterPath="$PROJECT_DIR$/wrapper.py" afterDir="false" />
+    <list default="true" id="985e3d7c-8ece-4833-89b0-0f9a6376bb1b" name="Changes" comment="Added Decorator @log">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_3/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_3/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_3/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/wrapper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,8 +158,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.client" />
-        <item itemvalue="Python.wrapper" />
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.wrapper" />
         <item itemvalue="Python.server_log_config" />
         <item itemvalue="Python.utils" />
       </list>
@@ -212,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667942379052</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Decorator @log">
+      <created>1668372324711</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668372324711</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +236,7 @@
     <MESSAGE value="lesson 2" />
     <MESSAGE value="Testing with unittests" />
     <MESSAGE value="Add Loggers for Server and Client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Loggers for Server and Client" />
+    <MESSAGE value="Added Decorator @log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Decorator @log" />
   </component>
 </project>
