@@ -7,8 +7,10 @@ import time
 from variables import DEFAULT_PORT, DEFAULT_IP_ADDRESS, ACTION, ACCOUNT_NAME, RESPONSE, MSG_LENGTH, MAX_CONNECTION,\
     PRESENCE, TIME, USER, ERROR
 from utils import get_msg, send_msg
+from wrapper import log
 
 CLIENT_LOG = logging.getLogger('client_log')
+
 
 def create_presence(account_name='Guest'):
     out = {
@@ -22,6 +24,7 @@ def create_presence(account_name='Guest'):
     return out
 
 
+@log
 def answer_process(message):
     CLIENT_LOG.debug(f'Проверка сообщения от сервера: {message}')
     if RESPONSE in message:
@@ -31,6 +34,7 @@ def answer_process(message):
     raise ValueError
 
 
+@log
 def main():
     try:
         server_address = sys.argv[1]

@@ -2,6 +2,7 @@ import json
 from variables import MSG_LENGTH, ENCODING
 
 
+
 def get_msg(client):
     encoded_response = client.recv(MSG_LENGTH)
     if isinstance(encoded_response, bytes):
