@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="985e3d7c-8ece-4833-89b0-0f9a6376bb1b" name="Changes" comment="refactoring Decorator @log">
-      <change afterPath="$PROJECT_DIR$/errors.py" afterDir="false" />
+    <list default="true" id="985e3d7c-8ece-4833-89b0-0f9a6376bb1b" name="Changes" comment="Multiple clients on the server using the select">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_3/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_3/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_3/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/variables.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
       <recent name="$PROJECT_DIR$/lesson_1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.server">
+  <component name="RunManager" selected="Python.client">
     <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="async_chat_new" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,8 +158,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.server" />
         <item itemvalue="Python.client" />
+        <item itemvalue="Python.server" />
         <item itemvalue="Python.ex_6" />
         <item itemvalue="Python.ex_5" />
         <item itemvalue="Python.ex_3 (1)" />
@@ -226,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668454103195</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Multiple clients on the server using the select">
+      <created>1668635122657</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668635122657</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +253,7 @@
     <MESSAGE value="Add Loggers for Server and Client" />
     <MESSAGE value="Added Decorator @log" />
     <MESSAGE value="refactoring Decorator @log" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring Decorator @log" />
+    <MESSAGE value="Multiple clients on the server using the select" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple clients on the server using the select" />
   </component>
 </project>

@@ -106,19 +106,6 @@ def main():
                     SERVER_LOG.info(f'Клиент {waiting_client.getpeername()} отключился от сервера')
                     clients.remove(waiting_client)
 
-        #     message_from_client = get_msg(client)
-        #     SERVER_LOG.debug(f'Получено сообщение {message_from_client}')
-        #     print(message_from_client)
-        #     response = get_client_msg(message_from_client)
-        #     SERVER_LOG.info(f'Сформирован ответ {response}')
-        #     send_msg(client, response)
-        #     SERVER_LOG.debug(f'Соединение с клиентом {client_address} закрывается')
-        #     client.close()
-        # except (ValueError, json.JSONDecodeError):
-        #     SERVER_LOG.error(f'От клиента {client_address} принято некорректное сообщение')
-        #     print('Принято некорректное сообщение от клиента')
-        #     client.close()
-
 
 if __name__ == '__main__':
     main()
