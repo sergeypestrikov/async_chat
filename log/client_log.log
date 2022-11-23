@@ -1,0 +1,4 @@
+CRITICAL 2022-11-08 23:39:26,948 client_log_config.py Alarm! Критично!
+ERROR 2022-11-08 23:39:26,949 client_log_config.py Just ошибка
+DEBUG 2022-11-08 23:39:26,949 client_log_config.py Отладка
+INFO 2022-11-08 23:39:26,950 client_log_config.py Для информации

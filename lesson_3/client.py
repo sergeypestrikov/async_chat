@@ -3,6 +3,7 @@ import sys
 import socket
 import time
 import logging
+from threading import Thread
 
 import namespace as namespace
 
@@ -90,6 +91,7 @@ def main():
     answer = answer_process(get_msg(s))
     msg_to_server = create_presence()
     send_msg(s, msg_to_server)
+    Thread(target=get_msg, args=(s, client_mode), daemon=True).start()
     try:
         answer = answer_process(get_msg(s))
         CLIENT_LOG.info(f'Принят ответ от сервера {answer}')
@@ -124,6 +126,8 @@ def main():
                 except (ConnectionResetError, ConnectionError, ConnectionAbortedError):
                     CLIENT_LOG.error(f'Соединение с сервером {server_address} потеряно')
                     sys.exit(1)
+
+
 
 if __name__ == '__main__':
     main()
