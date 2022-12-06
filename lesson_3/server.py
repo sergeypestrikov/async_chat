@@ -1,19 +1,32 @@
 import socket
 import sys
+import os
 import argparse
 import json
 import logging
 import select
+import threading
+import configparser
 import time
 import log.server_log_config
 from variables import *
 from utils import get_msg, send_msg
 from wrapper import log
+from lesson_10.descriptor import Port
 from lesson_10.metaclasses import ServerVerifier
 from lesson_10.descriptor import Port, logger
+from errors import IncorrectDataRecivedError
+from lesson_12.server_data_base import ServerStorage
+from PyQt6.QtWidgets import QApplication, QMessageBox
+from PyQt6.QtCore import QTimer
+from PyQt6.QtGui import QStandardItemModel, QStandardItem
+from lesson_12.server_gui import MainWindow, gui_model, HistoryWindow, create_msg_history_model, ConfigWindow
 
 
 SERVER_LOG = logging.getLogger('server_log')
+
+new_connection = False
+conflag_lock = threading.Lock()
 
 
 # Парсер аргументов коммандной строки.
@@ -35,13 +48,12 @@ class Server(metaclass=ServerVerifier):
         #параметры подключения
         self.address = listen_address
         self.port = listen_port
-
+        #БД Сервера
+        self.database = database
         #список подключенных клиентов
         self.clients = []
-
         #список сообщений к отправке
         self.messages = []
-
         #словарь с именами и сокетами
         self.names = dict()
 
@@ -130,7 +142,32 @@ def process_client_msg(self, message, client):
         self.clients.remove(self.names[ACCOUNT_NAME])
         self.names[ACCOUNT_NAME].close()
         del self.names[ACCOUNT_NAME]
+        with conflag_lock:
+            new_connection = True
         return
+    #если это запрос контакт-листа
+    elif ACTION in message and message[ACTION] == GET_CONTACTS and USER in message and \
+             self.names[message[USER]] == client:
+        response = RESPONSE_202
+        response[LIST_INFO] = self.database.get_contacts(message[USER])
+        send_msg(client, response)
+    #если добавление контакта
+    elif ACTION in message and message[ACTION] == ADD_CONTACT and ACCOUNT_NAME in message and USER in message \
+            and self.names[message[USER]] == client:
+        self.database.add_contact(message[USER], message[ACCOUNT_NAME])
+        send_msg(client, RESPONSE_200)
+    #если удаление контакта
+    elif ACTION in message and message[ACTION] == REMOVE_CONTACT and ACCOUNT_NAME in message and USER in message \
+            and self.names[message[USER]] == client:
+        self.database.remove_contact(message[USER], message[ACCOUNT_NAME])
+        send_msg(client, RESPONSE_200)
+    #если запрос известных пользователей
+    elif ACTION in message and message[ACTION] == USERS_REQUEST and ACCOUNT_NAME in message \
+            and self.names[message[ACCOUNT_NAME]] == client:
+        response = RESPONSE_202
+        response[LIST_INFO] = [user[0]
+                               for user in self.database.users_list()]
+        send_msg(client, response)
     #иначе ждет bad request
     else:
         response = RESPONSE_400
@@ -139,106 +176,106 @@ def process_client_msg(self, message, client):
         return
 
 def main():
-    # загрузка параметров командной строки
-    listen_address, listen_port = arg_parser()
-    #создание экз класса сервера
-    server = Server(listen_address, listen_port)
-    server.main_loop()
-#
-#
-# @log
-# def get_client_msg(message):
-#
-#     SERVER_LOG.debug(f'Проверка сообщения от клиента: {message}')
-#     if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
-#             and USER in message and message[USER][ACCOUNT_NAME] == 'Guest':
-#         send_msg(client, {RESPONSE: 200})
-#         return
-#     else:
-#         send_msg(client, {
-#             RESPONSE: 400,
-#             ERROR: 'Bad Request'
-#         })
-#         return
-#
-#
-# @log
-# def main():
-#     try:
-#         if '-p' in sys.argv:
-#             listen_port = int(sys.argv[sys.argv.index('-p') + 1])
-#         else:
-#             listen_port = DEFAULT_PORT
-#         if listen_port < 1024 or listen_port > 65535:
-#             raise ValueError
-#     except IndexError:
-#         print('Укажите номер порта после параметра -p')
-#         sys.exit(1)
-#     except ValueError:
-#         SERVER_LOG.critical(f'Номер порта {listen_port} указан некорректно. Нужно указать в диапазоне 1024 - 65535')
-#         sys.exit(1)
-#
-#     try:
-#         if '-a' in sys.argv:
-#             listen_address = sys.argv[sys.argv.index('-a') + 1]
-#         else:
-#             listen_address = ''
-#     except IndexError:
-#         print('Укажите адрес после параметра -a')
-#         sys.exit(1)
-#     SERVER_LOG.info(f'Сервер запущен. порт: {listen_port}')
-#     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#     s.bind((listen_address, listen_port))
-#     s.settimeout(0.2)
-#
-#     clients = []
-#     messages = []
-#
-#     s.listen(MAX_CONNECTION)
-#
-#     while True:
-#         try:
-#             client, client_address = s.accept()
-#             SERVER_LOG.info(f'соединение установлено c {client_address}')
-#         except OSError:
-#             pass
-#
-#         else:
-#             SERVER_LOG.info(f'Установлено соединение с {client_address}')
-#             clients.append(client)
-#
-#         recv_data_list = []
-#         send_data_list = []
-#         error_list = []
-#
-#         try:
-#             if clients:
-#                 recv_data_list, send_data_list, error_list = select.select(clients, clients, [], 0)
-#         except OSError:
-#             pass
-#         if recv_data_list:
-#             for client_with_msg in recv_data_list:
-#                 try:
-#                     process_client_msg(get_msg(client_with_msg), messages, client_with_msg)
-#                 except:
-#                     SERVER_LOG.info(f'Клиент {client_with_msg.getpeername()} отключился от сервера')
-#                     clients.remove(client_with_msg)
-#
-#         if messages and send_data_list:
-#             message = {
-#                 ACTION: MESSAGE,
-#                 SENDER: messages[0][0],
-#                 TIME: time.time(),
-#                 MESSAGE_TXT: messages[0][1]
-#             }
-#             del messages[0]
-#             for waiting_client in send_data_list:
-#                 try:
-#                     send_msg(waiting_client, message)
-#                 except:
-#                     SERVER_LOG.info(f'Клиент {waiting_client.getpeername()} отключился от сервера')
-#                     clients.remove(waiting_client)
-#
+    #загрузка файла конфигурации сервера
+    config = configparser.ConfigParser()
+
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    config.read(f"{dir_path}/{'server.ini'}")
+
+    #загрузка параметров командной строки, если нет параметров, то задаём значения по умоланию.
+    listen_address, listen_port = arg_parser(
+        config['SETTINGS']['Default_port'], config['SETTINGS']['Listen_Address'])
+
+    #инициализация базы данных
+    database = ServerStorage(
+        os.path.join(
+            config['SETTINGS']['Database_path'],
+            config['SETTINGS']['Database_file']))
+
+    #создание экземпляра класса - сервера и его запуск:
+    server = Server(listen_address, listen_port, database)
+    server.daemon = True
+    server.start()
+
+    #создание графического окуружение для сервера:
+    server_app = QApplication(sys.argv)
+    main_window = MainWindow()
+
+    #инициализация параметров в окна
+    main_window.statusBar().showMessage('Server Working')
+    main_window.active_clients_table.setModel(gui_model(database))
+    main_window.active_clients_table.resizeColumnsToContents()
+    main_window.active_clients_table.resizeRowsToContents()
+
+    #обновление списка подключённых, проверка флага подключения, если надо обновление списка
+    def list_update():
+        global new_connection
+        if new_connection:
+            main_window.active_clients_table.setModel(
+                gui_model(database))
+            main_window.active_clients_table.resizeColumnsToContents()
+            main_window.active_clients_table.resizeRowsToContents()
+            with conflag_lock:
+                new_connection = False
+
+    #создание окна со статистикой клиентов
+    def show_statistics():
+        global stat_window
+        stat_window = HistoryWindow()
+        stat_window.history_table.setModel(create_msg_history_model(database))
+        stat_window.history_table.resizeColumnsToContents()
+        stat_window.history_table.resizeRowsToContents()
+        stat_window.show()
+
+    #создание окна с настройками сервера.
+    def server_config():
+        global config_window
+        #создание окна и внесение в него текущих параметров
+        config_window = ConfigWindow()
+        config_window.db_path.insert(config['SETTINGS']['Database_path'])
+        config_window.db_file.insert(config['SETTINGS']['Database_file'])
+        config_window.port.insert(config['SETTINGS']['Default_port'])
+        config_window.ip.insert(config['SETTINGS']['Listen_Address'])
+        config_window.save_btn.clicked.connect(save_server_config)
+
+    #сохранение настроек
+    def save_server_config():
+        global config_window
+        message = QMessageBox()
+        config['SETTINGS']['Database_path'] = config_window.db_path.text()
+        config['SETTINGS']['Database_file'] = config_window.db_file.text()
+        try:
+            port = int(config_window.port.text())
+        except ValueError:
+            message.warning(config_window, 'Ошибка', 'Порт должен быть числом')
+        else:
+            config['SETTINGS']['Listen_Address'] = config_window.ip.text()
+            if 1023 < port < 65536:
+                config['SETTINGS']['Default_port'] = str(port)
+                print(port)
+                with open('server.ini', 'w') as conf:
+                    config.write(conf)
+                    message.information(
+                        config_window, 'OK', 'Настройки успешно сохранены!')
+            else:
+                message.warning(
+                    config_window,
+                    'Ошибка',
+                    'Порт должен быть от 1024 до 65536')
+
+    #таймер, обновляющий список клиентов 1 раз в секунду
+    timer = QTimer()
+    timer.timeout.connect(list_update)
+    timer.start(1000)
+
+    #связь кнопки с процедурами
+    main_window.refresh_button.triggered.connect(list_update)
+    main_window.show_history_button.triggered.connect(show_statistics)
+    main_window.config_btn.triggered.connect(server_config)
+
+    #запуск GUI
+    server_app.exec_()
+
 
 if __name__ == '__main__':
     main()

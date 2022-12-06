@@ -21,9 +21,18 @@ ERROR = 'error'
 MESSAGE = 'message'
 MESSAGE_TXT = 'message_txt'
 EXIT = 'exit'
+GET_CONTACTS = 'get_contacts'
+LIST_INFO = 'data_list'
+REMOVE_CONTACT = 'remove'
+ADD_CONTACT = 'add'
+USERS_REQUEST = 'get_users'
 
 RESPONSE_200 = {RESPONSE: 200}
 RESPONSE_400 = {
             RESPONSE: 400,
             ERROR: 'Bad Request'
         }
+RESPONSE_202 = {
+    RESPONSE: 202,
+    LIST_INFO: None
+}
