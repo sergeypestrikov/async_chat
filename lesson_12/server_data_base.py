@@ -111,7 +111,7 @@ class ServerStorage:
         if result.count():
             user = result.first()
             user.last_login = datetime.datetime.now() # eсли имя пользователя уже присутствует в таблице, обновляем время последнего входа
-        # если нет, создаем новго пользователя
+        # если нет, создаем нового пользователя
         else:
             user = self.Client(username)
             self.session.add(user)

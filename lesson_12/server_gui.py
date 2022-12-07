@@ -182,6 +182,14 @@ class ConfigWindow(QDialog):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = MainWindow()
+    window.statusBar().showMessage('Тестовый запуск')
+    test = QStandardItemModel(window)
+    test.setHorizontalHeaderLabels(['Имя клиента', 'IP', 'Порт', 'Время подключения'])
+    test.appendRow([QStandardItem('1'), QStandardItem('2'), QStandardItem('3')])
+    test.appendRow([QStandardItem('4'), QStandardItem('5'), QStandardItem('6')])
+    window.active_clients_table.setModel(test)
+    window.active_clients_table.resizeColumnsToContents()
+    print('Готово')
     window.show()
-
     app.exec()
+    print('Теперь точно готово')
