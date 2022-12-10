@@ -20,7 +20,8 @@ from lesson_12.client_data_base import ClientDataBase
 from lesson_13.client_face.transport import ClientTransport
 from lesson_13.client_face.database import ClientDataBase
 from lesson_13.client_face.start_dialog import UserNameDialog
-from lesson_13.client_face.main_window import ClientMainWindow
+from lesson_13.client_face.main_window import MainClientWindow
+
 
 # CLIENT_LOG = logging.getLogger('client_log')
 logger = logging.getLogger('client')
@@ -68,7 +69,7 @@ if __name__ == '__main__':
 
     #запись в лог
     logger.info(
-        f'Запущен клиент с параметрами: адрес сервера: {server_address} , порт: {server_port}, имя пользователя: {client_name}')
+        f'Запущен клиент с параметрами: адрес сервера: {server_address}, порт: {server_port}, имя пользователя: {client_name}')
 
     #cоздание объекта БД
     database = ClientDataBase(client_name)
@@ -79,11 +80,12 @@ if __name__ == '__main__':
     except ServerError as error:
         print(error.text)
         exit(1)
+
     transport.setDaemon(True)
     transport.start()
 
     #создание GUI
-    main_window = ClientMainWindow(database, transport)
+    main_window = MainClientWindow(database, transport)
     main_window.make_connection(transport)
     main_window.setWindowTitle(f'Программа myChat - {client_name}')
     client_app.exec()

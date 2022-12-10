@@ -193,3 +193,8 @@ if __name__ == '__main__':
     window.show()
     app.exec()
     print('Теперь точно готово')
+    # app = QApplication(sys.argv)
+    # message = QMessageBox
+    # dial = ConfigWindow()
+    #
+    # app.exec()

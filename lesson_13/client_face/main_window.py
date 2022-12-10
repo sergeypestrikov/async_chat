@@ -18,7 +18,7 @@ logger = logging.getLogger('client')
 
 
 #основное окно
-class ClientMainWindow(QMainWindow):
+class MainClientWindow(QMainWindow):
     def __init__(self, database, transport):
         super().__init__()
         #основные переменные
@@ -228,8 +228,7 @@ class ClientMainWindow(QMainWindow):
             #проверка есть ли такой пользователь у в контактах:
             if self.database.check_contact(sender):
                 #если есть, спрашиваем о желании открыть с ним чат и открываем при желании
-                if self.messages.question(self, 'Новое сообщение', \
-                                          f'Получено новое сообщение от {sender}, открыть чат с ним?', QMessageBox.Yes,
+                if self.messages.question(self, f'Получено новое сообщение от {sender}, открыть чат с ним?', QMessageBox.Yes,
                                           QMessageBox.No) == QMessageBox.Yes:
                     self.current_chat = sender
                     self.set_active_user()
