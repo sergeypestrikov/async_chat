@@ -175,6 +175,7 @@ def process_client_msg(self, message, client):
         send_msg(client, response)
         return
 
+
 def main():
     #загрузка файла конфигурации сервера
     config = configparser.ConfigParser()

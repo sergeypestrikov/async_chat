@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="985e3d7c-8ece-4833-89b0-0f9a6376bb1b" name="Changes" comment="Data storage and started GUI application">
+    <list default="true" id="985e3d7c-8ece-4833-89b0-0f9a6376bb1b" name="Changes" comment="Client side GUI">
+      <change beforePath="$PROJECT_DIR$/.idea/async_chat_new.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/async_chat_new.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_12/project_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_12/server_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_12/server_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_12/server_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13/client_face/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/main_window_conv.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13/client_face/main_window_conv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_3/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_3/client_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/client_log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_3/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_3/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/variables.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +45,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mac/PycharmProjects/async_chat_new/lesson_12&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mac/PycharmProjects/async_chat_new/lesson_13/client_face&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lesson_13/client_face" />
       <recent name="$PROJECT_DIR$/lesson_12" />
       <recent name="$PROJECT_DIR$/lesson_1" />
     </key>
@@ -59,7 +60,7 @@
       <recent name="$PROJECT_DIR$/lesson_3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.client">
+  <component name="RunManager" selected="Python.server_gui">
     <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="async_chat_new" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,7 +82,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="client_data_base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="del_contact" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="async_chat_new" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -89,11 +90,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_12" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_13/client_face" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_12/client_data_base.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_13/client_face/del_contact.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_window" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="async_chat_new" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_13/client_face" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_13/client_face/main_window.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,27 +137,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_3/server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="server_data_base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="async_chat_new" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_12" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_12/server_data_base.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.server_gui" />
         <item itemvalue="Python.client" />
         <item itemvalue="Python.server" />
-        <item itemvalue="Python.server_gui" />
-        <item itemvalue="Python.client_data_base" />
-        <item itemvalue="Python.server_data_base" />
+        <item itemvalue="Python.main_window" />
+        <item itemvalue="Python.del_contact" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +283,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670234564960</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Connect to Storage">
+      <created>1670355568521</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670355568521</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Client side GUI">
+      <created>1670448317977</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670448317977</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,6 +325,8 @@
     <MESSAGE value="Client and Server are updeated with MetaClasses" />
     <MESSAGE value="Started 'storage' DB with SQLAlchemy" />
     <MESSAGE value="Data storage and started GUI application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data storage and started GUI application" />
+    <MESSAGE value="Connect to Storage" />
+    <MESSAGE value="Client side GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client side GUI" />
   </component>
 </project>
