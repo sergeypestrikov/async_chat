@@ -1,9 +1,7 @@
 from sqlalchemy.ext.declarative import declarative_base
-from datetime import datetime
 
-from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey, DateTime, create_engine
-from sqlalchemy.orm import relationship, sessionmaker, mapper
-from lesson_3.variables import *
+from sqlalchemy import Column, Integer, String, MetaData, create_engine
+from sqlalchemy.orm import relationship
 
 meta = MetaData()
 

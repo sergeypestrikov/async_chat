@@ -1,6 +1,6 @@
 import unittest
-from lesson_3.server import get_client_msg
-from lesson_3.variables import ACTION, ACCOUNT_NAME, RESPONSE, PRESENCE, TIME, USER, ERROR
+from server import get_client_msg
+from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, PRESENCE, TIME, USER, ERROR
 
 
 class TestGetClientMsg(unittest.TestCase):

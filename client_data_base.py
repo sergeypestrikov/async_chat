@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine, Table, Column, Integer, String, Text, MetaData, DateTime
 from sqlalchemy.orm import mapper, sessionmaker
-from lesson_3.variables import *
 import datetime
 
 #клиентская база данных
@@ -112,12 +111,19 @@ class ClientDataBase:
             return False
 
     #возвращение истории переписки
-    def get_history(self, contact):
-        query = self.session.query(self.MessageHistory).filter_by(contact=contact)
-        return [(history_row.contact, history_row.direction, history_row.message, history_row.date)
+    def get_history(self, from_who=None, to_who=None):
+        query = self.session.query(self.MessageHistory)
+        if from_who:
+            query = query.filter_by(from_user=from_who)
+        if to_who:
+            query = query.filter_by(to_user=to_who)
+        return [(history_row.from_user, history_row.to_user, history_row.message, history_row.date)
                 for history_row in query.all()]
 
 # отладка
 if __name__ == '__main__':
-    test_db = ClientDataBase('Test_Base')
+    test_db = ClientDataBase('client_storage_db')
+    for i in ['client_storage_db']:
+        test_db.add_contact(i)
+
     print(test_db.get_contacts())

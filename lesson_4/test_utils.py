@@ -1,7 +1,7 @@
 import unittest
 import json
-from lesson_3.variables import ACTION, ACCOUNT_NAME, RESPONSE, PRESENCE, TIME, USER, ERROR, ENCODING
-from lesson_3.utils import get_msg, send_msg
+from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, PRESENCE, TIME, USER, ERROR, ENCODING
+from common.utils import get_msg, send_msg
 
 # Тестирование отправки и получения
 class TestSocket:

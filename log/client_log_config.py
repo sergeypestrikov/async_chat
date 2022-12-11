@@ -1,8 +1,5 @@
 import sys
-import os
-import logging
 import logging.handlers
-from lesson_3.variables import LOG_LEVEL
 
 logging.basicConfig(
     filename='client_log.log',

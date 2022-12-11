@@ -1,18 +1,13 @@
-import sys
-import json
 import logging
 
 from main_window_conv import Ui_MainClientWindow
-from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox, QListView
+from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox
 from PyQt6.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
-from PyQt6.QtCore import pyqtSlot, QEvent, Qt
+from PyQt6.QtCore import pyqtSlot, Qt
 
 from add_contact import AddContactDialog
 from del_contact import DelContactDialog
-from database import ClientDataBase
-from transport import ClientTransport
-from start_dialog import UserNameDialog
-from errors import ServerError
+from common.errors import ServerError
 
 logger = logging.getLogger('client')
 
