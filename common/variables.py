@@ -1,12 +1,13 @@
 import datetime
 import logging
 
-DEFAULT_PORT = 8888
+DEFAULT_PORT = 7777
 DEFAULT_IP_ADDRESS = '127.0.0.1'
 MAX_CONNECTION = 5
 MSG_LENGTH = 1024
 ENCODING = 'UTF-8'
 LOG_LEVEL = logging.DEBUG
+SERVER_CONFIG = 'server.ini'
 
 ACTION = 'action'
 TIME = 'time'
@@ -14,6 +15,8 @@ USER = 'user'
 ACCOUNT_NAME = 'account_name'
 SENDER = 'sender'
 DESTINATION = 'to'
+DATA = 'bin'
+PUBLIC_KEY = 'pubkey'
 
 PRESENCE = 'presence'
 RESPONSE = 'response'
@@ -26,6 +29,7 @@ LIST_INFO = 'data_list'
 REMOVE_CONTACT = 'remove'
 ADD_CONTACT = 'add'
 USERS_REQUEST = 'get_users'
+PUBLIC_KEY_REQUEST = 'pubkey_need'
 
 RESPONSE_200 = {RESPONSE: 200}
 RESPONSE_400 = {
@@ -35,4 +39,11 @@ RESPONSE_400 = {
 RESPONSE_202 = {
     RESPONSE: 202,
     LIST_INFO: None
+}
+RESPONSE_205 = {
+    RESPONSE: 205
+}
+RESPONSE_511 = {
+    RESPONSE: 511,
+    DATA: None
 }

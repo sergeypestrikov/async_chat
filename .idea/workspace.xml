@@ -2,12 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="985e3d7c-8ece-4833-89b0-0f9a6376bb1b" name="Changes" comment="Client side GUI">
+      <change afterPath="$PROJECT_DIR$/client/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/launcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/add_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/config_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/main_winwow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/remove_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/stat_window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/async_chat_new.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/async_chat_new.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_12/server_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_12/server_gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13/client_face/main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/main_window_conv.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13/client_face/main_window_conv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_3/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/client_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_10/descriptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/descriptor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_10/metaclasses.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/metaclasses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_11/chat_data_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat_data_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_12/ancor.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ancor.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_12/client_data_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_data_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_12/server_data_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server_data_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_12/server_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/add_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/del_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/del_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/main_window_conv.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/main_window_conv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/start_dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/start_dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/client_face/transport.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/transport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/variables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/test_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/test_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/test_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/test_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/test_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/client_log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/log/client_log_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/server_log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/log/server_log_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/server_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/wrapper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +91,14 @@
       <recent name="$PROJECT_DIR$/lesson_1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/server" />
+      <recent name="$PROJECT_DIR$/common" />
       <recent name="$PROJECT_DIR$/lesson_12" />
       <recent name="$PROJECT_DIR$/lesson_3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.server_gui">
+  <component name="RunManager" selected="Python.client">
     <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="async_chat_new" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -69,11 +107,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_3/client.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,7 +120,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="del_contact" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="core" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="async_chat_new" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,11 +128,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_13/client_face" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_13/client_face/del_contact.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server/core.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,7 +141,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main_window" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="launcher" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="async_chat_new" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,11 +149,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_13/client_face" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_13/client_face/main_window.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/launcher.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,11 +170,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_3/server.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,7 +195,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_12/server_gui.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_gui.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.server_gui" />
         <item itemvalue="Python.client" />
         <item itemvalue="Python.server" />
-        <item itemvalue="Python.main_window" />
-        <item itemvalue="Python.del_contact" />
+        <item itemvalue="Python.launcher" />
+        <item itemvalue="Python.core" />
+        <item itemvalue="Python.server_gui" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670448317977</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Client side GUI">
+      <created>1670698983883</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670698983883</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

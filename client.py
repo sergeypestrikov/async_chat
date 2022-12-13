@@ -1,26 +1,15 @@
-import json
 import sys
-import socket
-import threading
-import dis
-import argparse
-from PyQt6.QtWidgets import QApplication
 import logging
-from threading import Thread
-from errors import IncorrectDataRecivedError, ReqFieldMissingError, ServerError
-import namespace as namespace
+import argparse
 import log.client_log_config
-import time
-from variables import *
-from utils import get_msg, send_msg
-from wrapper import log
-from errors import IncorrectDataRecivedError, ReqFieldMissingError, ServerError
-from lesson_10.metaclasses import ClientVerifier
-from lesson_12.client_data_base import ClientDataBase
-from lesson_13.client_face.transport import ClientTransport
-from lesson_13.client_face.database import ClientDataBase
-from lesson_13.client_face.start_dialog import UserNameDialog
-from lesson_13.client_face.main_window import MainClientWindow
+from PyQt6.QtWidgets import QApplication
+from common.variables import *
+from common.wrapper import log
+from common.errors import ServerError
+from transport import ClientTransport
+from database import ClientDataBase
+from start_dialog import UserNameDialog
+from main_window import MainClientWindow
 
 
 # CLIENT_LOG = logging.getLogger('client_log')

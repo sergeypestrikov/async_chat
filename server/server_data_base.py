@@ -1,9 +1,8 @@
-from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
 
 from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey, DateTime, create_engine
-from sqlalchemy.orm import relationship, sessionmaker, mapper
-from lesson_3.variables import *
+from sqlalchemy.orm import sessionmaker, mapper
+from common.variables import *
 
 #серверная база данных
 class ServerStorage:
@@ -222,7 +221,6 @@ class ServerStorage:
 #отладка
 if __name__ == '__main__':
     test_db = ServerStorage('server_storage_db')
-    test_db.user_login('1111', '127.0.0.1', 8080)
     test_db.user_login('7777', '127.0.0.1', 8088)
     print(test_db.users_list())
 

@@ -1,5 +1,4 @@
-from PyQt6 import QtCore, QtGui, QtWidgets
-from lesson_13.client_face.main_window import MainClientWindow
+from PyQt6 import QtCore, QtWidgets
 
 
 class Ui_MainClientWindow(object):
