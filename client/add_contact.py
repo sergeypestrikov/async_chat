@@ -8,8 +8,12 @@ from PyQt6.QtGui import QStandardItemModel, QStandardItem
 logger = logging.getLogger('client')
 
 
-#выбор контакта для добавления
 class AddContactDialog(QDialog):
+    '''
+    Диалог добавления пользователя в список контактов.
+    Предлагает пользователю список возможных контактов и
+    добавляет выбранный в контакты.
+    '''
     def __init__(self, transport, database):
         super().__init__()
         self.transport = transport
@@ -41,24 +45,33 @@ class AddContactDialog(QDialog):
         self.btn_cancel.move(230, 60)
         self.btn_cancel.clicked.connect(self.close)
 
-        #список возможных контактов
+        # Cписок возможных контактов
         self.possible_contacts_update()
-        #действие на кнопку обновить
+        # Действие на кнопку обновить
         self.btn_refresh.clicked.connect(self.update_possible_contacts)
 
-    #список возможных контактов разницей между всеми пользователями
+
     def possible_contacts_update(self):
+        '''
+        Метод заполнения списка возможных контактов.
+        Создаёт список всех зарегистрированных пользователей
+        за исключением уже добавленных в контакты и самого себя.
+        '''
         self.selector.clear()
-        #множества всех контактов и контактов клиента
+        # Множества всех контактов и контактов клиента
         contacts_list = set(self.database.get_contacts())
         users_list = set(self.database.get_users())
-        #чтобы нельзя было добавить самого себя
+        # Чтобы нельзя было добавить самого себя
         users_list.remove(self.transport.username)
-        #список возможных контактов
+        # Список возможных контактов
         self.selector.addItems(users_list - contacts_list)
 
-    #обновлялка таблицы известных пользователей
+
     def update_possible_contacts(self):
+        '''
+        Метод обновления списка возможных контактов. Запрашивает с сервера
+        список известных пользователей и обновляет содержимое окна.
+        '''
         try:
             self.transport.user_list_update()
         except OSError:
