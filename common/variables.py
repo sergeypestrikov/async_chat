@@ -1,14 +1,22 @@
 import datetime
 import logging
 
+# Порт по умолчания для сетевого взаимодействия
 DEFAULT_PORT = 7777
+# IP адрес по умолчанию для подключения клиента
 DEFAULT_IP_ADDRESS = '127.0.0.1'
+# Максимальная очередь подключения
 MAX_CONNECTION = 5
+# Максимальная длина сообщения а байтах
 MSG_LENGTH = 1024
+# Кодировка проекта
 ENCODING = 'UTF-8'
+# Текущий уровень логирования
 LOG_LEVEL = logging.DEBUG
+# БД для хранения данных сервера
 SERVER_CONFIG = 'server.ini'
 
+# Основные ключи для протокола JIM
 ACTION = 'action'
 TIME = 'time'
 USER = 'user'
@@ -18,6 +26,7 @@ DESTINATION = 'to'
 DATA = 'bin'
 PUBLIC_KEY = 'pubkey'
 
+# Прочие ключи из протокола
 PRESENCE = 'presence'
 RESPONSE = 'response'
 ERROR = 'error'
@@ -31,6 +40,7 @@ ADD_CONTACT = 'add'
 USERS_REQUEST = 'get_users'
 PUBLIC_KEY_REQUEST = 'pubkey_need'
 
+# Словари - ответы
 RESPONSE_200 = {RESPONSE: 200}
 RESPONSE_400 = {
             RESPONSE: 400,

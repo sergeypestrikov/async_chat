@@ -1,7 +1,8 @@
 import dis
 
-# метакласс выполняющий базовую проверку класса «Клиент»
+
 class ClientVerifier(type):
+    '''Метакласс выполняющий базовую проверку класса «Клиент»'''
     def __init__(self, clsname, bases, clsdict):
         methods = []
         for func in clsdict:
@@ -23,8 +24,9 @@ class ClientVerifier(type):
             raise TypeError('Отсутствуют вызовы функций работающих с сокетами')
         super().__init__(clsname, bases, clsdict)
 
-# метакласс выполняющий базовую проверку класса «Сервер»
+
 class ServerVerifier(type):
+    '''Метакласс выполняющий базовую проверку класса «Сервер»'''
     def __init__(self, clsname, bases, clsdict):
         methods = []
         attributes = []

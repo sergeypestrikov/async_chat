@@ -7,8 +7,9 @@ from PyQt6.QtWidgets import QWidget, QApplication, QVBoxLayout, QMainWindow, QWi
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QStandardItemModel, QStandardItem, QIcon, QAction
 
-#создание таблицы QModel для отображения в окне программы
+
 def gui_model(database):
+    '''Создание таблицы QModel для отображения в окне программы'''
     list_users = database.active_users_list()
     list = QStandardItemModel()
     list.setHorizontalHeaderLabels(['Имя клиента', 'IP', 'Порт', 'Время подключения'])
@@ -22,10 +23,12 @@ def gui_model(database):
         port.appendRow([user, ip, port, time])
     return list
 
-#заполнение таблицы историей сообщений
+
 def create_msg_history_model(database):
-    history_list = database.message_history() #список записей из базы
-    #объект модели данных
+    '''Заполнение таблицы историей сообщений'''
+    # Список записей из базы
+    history_list = database.message_history()
+    # Объект модели данных
     list = QStandardItemModel()
     list.setHorizontalHeaderLabels(['Имя клиента', 'Последний вход', 'Сообщение отправлено', 'Кол-во сообщений'])
     for row in history_list:
@@ -41,7 +44,7 @@ def create_msg_history_model(database):
         list.appendRow([user, last_seen, sent, received])
     return list
 
-#основное окно
+# Основное окно
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -50,14 +53,18 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('Chat project')
 
     def initUI(self):
-        exitAction = QAction('Выход', self) #кнопка выхода
+        # Кнопка выхода
+        exitAction = QAction('Выход', self)
         exitAction.triggered.connect(QApplication.quit)
-
-        self.refresh_button = QAction('Обновить список', self) #кнопка обновить
-        self.config_button = QAction('Настройки сервера', self)#кнопка насроек сервера
-        self.show_history_button = QAction('История клиентов', self) #вывести историю сообщений
-        self.statusBar() #статус-панель
-        #тулбар
+        # Кнопка обновить
+        self.refresh_button = QAction('Обновить список', self)
+        # Кнопка настроек сервера
+        self.config_button = QAction('Настройки сервера', self)
+        # Вывод истории сообщений
+        self.show_history_button = QAction('История клиентов', self)
+        # Статус-панель
+        self.statusBar()
+        # Тулбар
         self.toolbar = self.addToolBar('MainBar')
         self.toolbar.addAction(exitAction)
         self.toolbar.addAction(self.refresh_button)
@@ -66,18 +73,18 @@ class MainWindow(QMainWindow):
 
         self.setFixedSize(500, 500)
         self.setWindowTitle('Давайте общаться')
-
-        self.label = QLabel('Список подключённых клиентов:', self) #инфа, что ниже список подключённых клиентов
+        # Инфа, что ниже список подключённых клиентов
+        self.label = QLabel('Список подключённых клиентов:', self)
         self.label.setFixedSize(240, 15)
         self.label.move(10, 25)
-
-        self.active_clients_table = QTableView(self) #окно со списком подключённых клиентов
+        # Окно со списком подключённых клиентов
+        self.active_clients_table = QTableView(self)
         self.active_clients_table.move(10, 45)
         self.active_clients_table.setFixedSize(780, 400)
 
         self.show()
 
-#окно с историей пользователей
+# Окно с историей пользователей
 class HistoryWindow(QDialog):
     def __init__(self):
         super().__init__()
@@ -86,18 +93,18 @@ class HistoryWindow(QDialog):
     def initUI(self):
         self.setWindowTitle('Статистика клиентов')
         self.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose)
-        #кнопка закрытия окна
+        # Кнопка закрытия окна
         self.close_button = QPushButton('Закрыть', self)
         self.close_button.move(250, 650)
         self.close_button.clicked.connect(self.close)
-        #лист с историей
+        # Лист с историей
         self.history_table = QTableView(self)
         self.history_table.move(10, 10)
         self.history_table.setFixedSize(580, 620)
 
         self.show()
 
-#окно настроек
+# Окно настроек
 class ConfigWindow(QDialog):
     def __init__(self):
         super().__init__()
@@ -107,7 +114,7 @@ class ConfigWindow(QDialog):
         self.setFixedSize(365, 260)
         self.setWindowTitle('Настройки сервера')
 
-        # Надпись о файле базы данных:
+        # Надпись о файле базы данных
         self.db_path_label = QLabel('Путь до файла базы данных: ', self)
         self.db_path_label.move(10, 10)
         self.db_path_label.setFixedSize(240, 15)
@@ -118,7 +125,7 @@ class ConfigWindow(QDialog):
         self.db_path.move(10, 30)
         self.db_path.setReadOnly(True)
 
-        # Кнопка выбора пути.
+        # Кнопка выбора пути
         self.db_path_select = QPushButton('Обзор...', self)
         self.db_path_select.move(275, 28)
 
@@ -157,7 +164,7 @@ class ConfigWindow(QDialog):
         self.ip_label.move(10, 148)
         self.ip_label.setFixedSize(180, 15)
 
-        # Метка с напоминанием о пустом поле.
+        # Метка с напоминанием о пустом поле
         self.ip_label_note = QLabel('Оставьте это поле пустым, чтобы принимать соединения с любых адресов.', self)
         self.ip_label_note.move(10, 168)
         self.ip_label_note.setFixedSize(500, 30)
@@ -171,7 +178,7 @@ class ConfigWindow(QDialog):
         self.save_btn = QPushButton('Сохранить', self)
         self.save_btn.move(190, 220)
 
-        # Кнапка закрытия окна
+        # Кнопка закрытия окна
         self.close_button = QPushButton('Закрыть', self)
         self.close_button.move(275, 220)
         self.close_button.clicked.connect(self.close)
