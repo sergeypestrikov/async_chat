@@ -1,6 +1,6 @@
 import unittest
-from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, PRESENCE, TIME, USER, ERROR
-from client import create_presence, answer_process
+from variables import ACTION, ACCOUNT_NAME, RESPONSE, PRESENCE, TIME, USER, ERROR
+from client_package.client_whl import create_presence, answer_process
 
 
 class TestClient(unittest.TestCase):

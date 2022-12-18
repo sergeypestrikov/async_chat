@@ -2,11 +2,11 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/client" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_13" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_3" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/common" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/server" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/client_package/client_whl/client" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/client_package/client_whl/common" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/server_package/server_whl/server" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

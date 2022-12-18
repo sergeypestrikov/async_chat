@@ -1,0 +1,42 @@
+INFO 2022-11-08 22:15:16,366 Информационная запись
+INFO 2022-11-08 22:24:54,854 Информационная запись
+INFO 2022-11-08 22:38:24,136 Информационная запись
+INFO 2022-11-08 22:38:45,503 Информационная запись
+CRITICAL 2022-11-08 23:05:47,688 Alarm! Критично!
+ERROR 2022-11-08 23:05:47,688 Just ошибка
+DEBUG 2022-11-08 23:05:47,689 Отладка
+INFO 2022-11-08 23:05:47,689 Для информации
+Alarm! Критично!
+CRITICAL 2022-11-08 23:06:40,237 Alarm! Критично!
+Just ошибка
+ERROR 2022-11-08 23:06:40,238 Just ошибка
+Отладка
+DEBUG 2022-11-08 23:06:40,238 Отладка
+Для информации
+INFO 2022-11-08 23:06:40,238 Для информации
+Alarm! Критично!
+Just ошибка
+CRITICAL 2022-11-08 23:14:02,284 Alarm! Критично!
+ERROR 2022-11-08 23:14:02,285 Just ошибка
+DEBUG 2022-11-08 23:14:02,285 Отладка
+INFO 2022-11-08 23:14:02,285 Для информации
+CRITICAL 2022-11-08 23:15:10,529 server_log_config.py Alarm! Критично!
+ERROR 2022-11-08 23:15:10,530 server_log_config.py Just ошибка
+DEBUG 2022-11-08 23:15:10,530 server_log_config.py Отладка
+INFO 2022-11-08 23:15:10,530 server_log_config.py Для информации
+CRITICAL 2022-11-09 00:07:24,660 server_log_config.py Alarm! Критично!
+ERROR 2022-11-09 00:07:24,662 server_log_config.py Just ошибка
+DEBUG 2022-11-09 00:07:24,662 server_log_config.py Отладка
+INFO 2022-11-09 00:07:24,662 server_log_config.py Для информации
+Alarm! Критично!
+CRITICAL 2022-11-09 00:09:06,418 server_log_config.py Alarm! Критично!
+Just ошибка
+ERROR 2022-11-09 00:09:06,419 server_log_config.py Just ошибка
+Отладка
+DEBUG 2022-11-09 00:09:06,419 server_log_config.py Отладка
+Для информации
+INFO 2022-11-09 00:09:06,419 server_log_config.py Для информации
+CRITICAL 2022-11-13 20:19:32,328 server_log_config.py Alarm! Критично!
+ERROR 2022-11-13 20:19:32,333 server_log_config.py Just ошибка
+DEBUG 2022-11-13 20:19:32,334 server_log_config.py Отладка
+INFO 2022-11-13 20:19:32,334 server_log_config.py Для информации
