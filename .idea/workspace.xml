@@ -1,129 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="985e3d7c-8ece-4833-89b0-0f9a6376bb1b" name="Changes" comment="PEP8 checking code + Created Documentation">
-      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/source/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client_package/client_whl/log/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client_package/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/common/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/common/descriptor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/common/errors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/common/metaclasses.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/common/server_log.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/common/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/common/variables.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/common/wrapper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/doctrees/client.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/doctrees/common.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/doctrees/environment.pickle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/doctrees/index.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/doctrees/launcher.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/doctrees/log.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/doctrees/server.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/.buildinfo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_sources/client.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_sources/common.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_sources/index.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_sources/launcher.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_sources/log.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_sources/server.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/_sphinx_javascript_frameworks_compat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/alabaster.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/base-stemmer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/basic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/doctools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/documentation_options.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/jquery-3.6.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/language_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/pygments.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/russian-stemmer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/searchtools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/sphinx_highlight.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/translations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/underscore-1.13.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/_static/underscore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/client.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/common.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/genindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/launcher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/log.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/objects.inv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/py-modindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/searchindex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/build/html/server.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/make.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/server_log.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/source/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/source/client.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/source/common.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/source/conf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/source/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/source/launcher.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/source/log.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/doc/source/server.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/launcher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/log/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/log/client_log.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/log/client_log_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/log/server_log.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/log/server_log.log.2022-11-08" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/log/server_log_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/server_whl/server/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_package/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/async_chat_new.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/async_chat_new.iml" afterDir="false" />
+    <list default="true" id="985e3d7c-8ece-4833-89b0-0f9a6376bb1b" name="Changes" comment="whl packages with server and client distributions">
+      <change afterPath="$PROJECT_DIR$/.pypirc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_Sam.db3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_Sergey.db3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_client_storage_db.db3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/.idea/client_package.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/client/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/client/add_contact.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/client/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/client/del_contact.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/client/main_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/client/main_window_conv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/client/start_dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/client/transport.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/common/descriptor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/common/errors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/common/metaclasses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/common/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/common/variables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/common/wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/doc/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/doc/source/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/doc/source/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/launcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/log/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/log/client_log_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/build/lib/client_whl/log/server_log_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/client/client_Test_Base.db3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/common/server_log.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/doctrees/client.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/doctrees/common.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/doctrees/environment.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/doctrees/index.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/doctrees/launcher.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/doctrees/log.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/doctrees/server.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/.buildinfo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_sources/client.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_sources/common.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_sources/index.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_sources/launcher.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_sources/log.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_sources/server.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/_sphinx_javascript_frameworks_compat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/alabaster.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/base-stemmer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/basic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/doctools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/documentation_options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/jquery-3.6.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/language_data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/pygments.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/russian-stemmer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/searchtools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/sphinx_highlight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/translations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/underscore-1.13.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/_static/underscore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/genindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/launcher.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/objects.inv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/py-modindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/searchindex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/build/html/server.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/make.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/source/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/client_whl/doc/source/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/dist/my_chat_project-0.0.1-py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/dist/my_chat_project-0.0.1.tar.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/my_chat_project.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/my_chat_project.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/my_chat_project.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/my_chat_project.egg-info/requires.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_package/my_chat_project.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_qwerty.db3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_qwery.db3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_3/server_log.log.2022-11-19" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/.idea/server_package.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/common/descriptor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/common/errors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/common/metaclasses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/common/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/common/variables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/common/wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/doc/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/doc/source/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/doc/source/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/launcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/log/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/log/client_log_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/log/server_log_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/server/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/server/add_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/server/config_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/server/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/server/main_winwow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/server/remove_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/server/server_data_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/build/lib/server_whl/server/stat_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/dist/my_chat_project_server-0.0.1-py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/dist/my_chat_project_server-0.0.1.tar.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/my_chat_project.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/my_chat_project.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/my_chat_project.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/my_chat_project.egg-info/requires.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/my_chat_project.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/.idea/server_whl.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/server/server_log.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_package/server_whl/server/server_server_storage_db.db3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_server_database.db3.db3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_server_storage_db.db3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/client/add_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/client/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/del_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/client/del_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/client/main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main_window_conv.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/client/main_window_conv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/start_dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/client/start_dialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/transport.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/client/transport.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/descriptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/common/descriptor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/common/errors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/metaclasses.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/common/metaclasses.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/common/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/common/variables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/common/wrapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/source/client.rst" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/doc/source/client.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/source/common.rst" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/doc/source/common.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/source/launcher.rst" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/doc/source/launcher.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/source/log.rst" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/doc/source/log.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/source/server.rst" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/doc/source/server.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/launcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/test_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/test_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/test_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/test_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/test_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/client/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/client_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/log/client_log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/client_log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/log/client_log_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/server_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/log/server_log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/server_log.log.2022-11-08" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/log/server_log.log.2022-11-08" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/server_log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/log/server_log_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_package/server_whl/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_package/client_whl/common/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/add_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_package/server_whl/server/add_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_package/server_whl/server/config_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_package/server_whl/server/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main_winwow.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_package/server_whl/server/main_winwow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/remove_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_package/server_whl/server/remove_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server_data_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_package/server_whl/server/server_data_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/stat_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_package/server_whl/server/stat_window.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +186,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/mac/PycharmProjects/async_chat_new/client_package",
+    "last_opened_file_path": "/Users/mac/PycharmProjects/async_chat_new",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
